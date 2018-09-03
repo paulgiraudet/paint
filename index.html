@@ -11,13 +11,47 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
+  <div class="flex-container">
+    <div class="row p-0 m-0">
+      <div class="col-md-8">
+        <canvas id="canvas" class="mt-2"></canvas>
+      </div>
+      <div class="col-md-4">
+        <ul id="couleurs" class="d-flex flex-wrap">
+    			<li class="mx-2 mt-2" style="background: rgb(0, 0, 0);"><a href="#" data-couleur="#000000" class="actif"></a></li>
+    			<li class="mx-2 mt-2" style="background: rgb(255, 255, 255);"><a href="#" data-couleur="#ffffff"></a></li>
+    			<li class="mx-2 mt-2" style="background: rgb(255, 0, 0);"><a href="#" data-couleur="#ff0000" ></a></li>
+    			<li class="mx-2 mt-2" style="background: brown;"><a href="#" data-couleur="brown"></a></li>
+    			<li class="mx-2 mt-2" style="background: orange;"><a href="#" data-couleur="orange"></a></li>
+    			<li class="mx-2 mt-2" style="background: yellow;"><a href="#" data-couleur="yellow"></a></li>
+    			<li class="mx-2 mt-2" style="background: green;"><a href="#" data-couleur="green"></a></li>
+    			<li class="mx-2 mt-2" style="background: cyan;"><a href="#" data-couleur="cyan"></a></li>
+    			<li class="mx-2 mt-2" style="background: blue;"><a href="#" data-couleur="blue"></a></li>
+    			<li class="mx-2 mt-2" style="background: indigo;"><a href="#" data-couleur="indigo"></a></li>
+    			<li class="mx-2 mt-2" style="background: violet;"><a href="#" data-couleur="Violet"></a></li>
+    			<li class="mx-2 mt-2" style="background: pink;"><a href="#" data-couleur="pink"></a></li>
+    		</ul>
+
+    		<form id="largeurs_pinceau" oninput="output.value=largeur_pinceau.value">
+    			<label for="largeur_pinceau">Largeur du pinceau :</label>
+    			<input id="largeur_pinceau" min="1" max="20" value="1" type="range" class="custom-range">
+    			<output id="output">1</output>
+
+    			<br>
+
+    			<input id="reset" value="Réinitialiser" type="reset">
+    		</form>
+
+      </div>
+    </div>
+  </div>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
